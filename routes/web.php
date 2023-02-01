@@ -23,14 +23,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/user', function () {
-    return view('layouts.uts-layout');
-});
-
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+// Route::get('/admin/dashboard', function () {
+//     return view('admin.dashboard');
+// })->middleware(['auth:admin', 'verified'])->name('admin.dashboard');
+// require __DIR__.'/adminauth.php';
 
 Route::middleware('auth')->group(function () {
     Route::get('/dashboard', function () {
@@ -43,7 +39,6 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
-require __DIR__.'/auth.php';
 require __DIR__.'/auth.php';
 
 // Route::controller('auth') -> group(function () {
