@@ -1,0 +1,1 @@
+<img src="{{ URL::asset('img/logo.svg')}}" alt="logo" class="w-10">
