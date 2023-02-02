@@ -54,14 +54,14 @@
                 @forelse ($companies as $key1=>$company)
                     <tr class="bg-white border-b  hover:bg-gray-50 ">
                         <td class="py-4 px-6 ">
-                            {{ $key1 + 1 }}
+                            {{ $key1 + 1 }} 
                         </td>
                         <td class="py-4 px-6 ">
                             {{ $company->name }}
                         </td>
                         <td class="py-4 px-6">
                             <a href="{{ asset('storage/media/companies/' . $company->company_image) }}" target="blank">
-                                <img src="{{ asset('storage/media/companies/' . $company->company_image) }}"
+                                <img src="{{ asset('storage/media/companies/' . $company->company_image) }}" 
                                     alt="image" class="w-20 rounded">
                             </a>
                         </td>               
@@ -82,14 +82,14 @@
                         </td>
                     </tr>
                 @empty
-                    <h3 class="text-2xl text-center font-bold p-5">There is no companies found</h3>
+                    <h3 class="text-2xl text-center font-bold p-5">There is no companies found</h3> 
                 @endforelse
             </tbody>
         </table>
 
         {{-- Pagination --}}
         <div class="p-4">
-            {{ $companies->links() }}
+            {{ $companies->links() }} 
         </div>
     </div>
 

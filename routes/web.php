@@ -59,7 +59,7 @@ require __DIR__.'/auth.php';
 // Route::get('articles', 'ArticleController@show');
 // Route::get('/showAll', 'App\Http\Controllers\CompaniesController@showAll');
 
-Route::resource('articles', ArticleController::class)->middleware(['auth', 'verified']);
-Route::resource('companies', CompaniesController::class)->middleware(['auth', 'verified']);
+Route::resource('articles', ArticleController::class)->middleware(['auth', 'verified']); //article
+Route::resource('companies', CompaniesController::class)->middleware(['auth', 'verified']); //companies
 
 
