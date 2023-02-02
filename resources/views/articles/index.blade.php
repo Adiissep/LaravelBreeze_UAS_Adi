@@ -29,8 +29,12 @@
                 </div>
             </form>
 
-            {{-- <!-- <a href="{{ route('articles.create') }}" --}}
-                {{-- class="px-5 py-2 rounded-lg bg-gray-800 hover:opacity-80 text-white">Create Article</a> --> --}}
+                <!-- post to frontend -->
+                <a href="{{ asset('articles/index') }}"
+                    class="font-medium text-green-600 hover:underline">
+                    <x-secondary-button class="ml-3">Go to landing page</x-secondary-button>
+                </a>
+
                 <a href="{{ route('articles.create') }}">
                 <x-primary-button class="ml-3"> {{ __('Create Article') }} </x-primary-button></a>
                 
@@ -87,11 +91,7 @@
                                     Delete
                                 </button>
                             </form>
-                            <!-- post to frontend -->
-                            <a href="{{ route('articles.edit', $article->id) }}"
-                                class="font-medium text-green-600 hover:underline">
-                                <x-secondary-button class="ml-3">Post to landing page</x-secondary-button>
-                            </a>
+                            
                         </td>
                     </tr>
                 @empty

@@ -119,10 +119,39 @@
                             </li>
                     </div>
                 </div>
-              
-                <div class="lg:block hidden">
-                    <a href="#" class="bg-second px-6 text-white text-[.9rem] py-2.5 rounded-sm">Registration</a>
+                @if (Route::has('login'))
+                {{-- <slot name="content">
+                    <a href="route('profile.edit')">
+                        {{ __('Profile') }}
+                    </a>
+
+                    <!-- Authentication -->
+                    <form method="POST" action="{{ route('logout') }}">
+                        @csrf
+
+                        <a href="route('logout')"
+                                onclick="event.preventDefault();
+                                            this.closest('form').submit();">
+                            {{ __('Log Out') }}
+                        </a>
+                    </form>
+                </slot> --}}
+                <div class="hidden lg:block hidden">
+                    <a href="{{ url('/dashboard') }}" class="bg-second px-6 text-white text-[.9rem] py-2.5 rounded-sm">
+                        Dashboard</a>
                 </div>
+                <div class="hidden lg:block hidden">
+                    <a href="{{ route('profile.edit') }}" class="bg-second px-6 text-white text-[.9rem] py-2.5 rounded-sm">
+                        Profil</a>
+                </div>
+                @else
+                <div class="hidden lg:block hidden">
+                    <a href="{{ route('login') }}" class="bg-second px-6 text-white text-[.9rem] py-2.5 rounded-sm">Login</a>
+                </div>
+                <div class="hidden lg:block hidden">
+                    <a href="{{ route('register') }}" class="bg-second px-6 text-white text-[.9rem] py-2.5 rounded-sm">Registration</a>
+                </div>
+                @endif
             </div>
     
             <div id="toggle" class="text-back text-[2rem] lg:hidden absolute right-10">
@@ -278,7 +307,7 @@
                             <p class="mt-2 text-gray-700">
                                 {{ $item->content }}
                             </p>
-                            <button class="mt-4 px-6 py-3 rounded-md bg-second text-white font-bold">Buy Now</button>
+                            <button class="flex item-center mt-4 px-6 py-3 rounded-md bg-second text-white font-bold ">Buy Now</button>
                         </div>
                     </li>
                     @endforeach

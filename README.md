@@ -4,6 +4,9 @@
 -   Nama : Adi Sepriyadi
 -   Kelas : TI20E
 
+## Demo Video Project
+https://www.youtube.com/watch?v=ciNmQrUOY-U
+
 ## Project Features
 
 -   Create Laravel Breeze

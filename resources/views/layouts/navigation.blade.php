@@ -12,17 +12,22 @@
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    @if (Auth::user()->roles()->first()->name =='admin')
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
-
                     <x-nav-link :href="route('articles.index')" :active="request()->routeIs('articles.index','articles.edit','articles.create')" >
-                            {{ __('Articles') }}
+                        {{ __('Articles') }}
                     </x-nav-link>
 
                     <x-nav-link :href="route('companies.index')" :active="request()->routeIs('companies.index','companies.edit','companies.create')">
                             {{ __('Company') }}
-                </x-nav-link>
+                    </x-nav-link>
+                    @else
+                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                        {{ __('Dashboard') }}
+                    </x-nav-link>
+                    @endif
                 </div>
             </div>
 
