@@ -1,8 +1,6 @@
 # Projek UAS Laravel 9 Breeze Vite 
 
--   NIM : 20200040093
 -   Nama : Adi Sepriyadi
--   Kelas : TI20E
 
 ## Demo Video Project
 https://www.youtube.com/watch?v=uqjYnQBRZHU
